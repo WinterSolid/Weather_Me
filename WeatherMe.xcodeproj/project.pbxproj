@@ -10,6 +10,12 @@
 		3AC9424E29FF014900CA9B84 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC9424D29FF014900CA9B84 /* WelcomeView.swift */; };
 		3AC9424F29FF014900CA9B84 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC9424D29FF014900CA9B84 /* WelcomeView.swift */; };
 		3AC9425029FF014900CA9B84 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC9424D29FF014900CA9B84 /* WelcomeView.swift */; };
+		3AC9425729FF476F00CA9B84 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC9425629FF476F00CA9B84 /* LoadingView.swift */; };
+		3AC9425829FF476F00CA9B84 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC9425629FF476F00CA9B84 /* LoadingView.swift */; };
+		3AC9425929FF476F00CA9B84 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC9425629FF476F00CA9B84 /* LoadingView.swift */; };
+		3AC9425B29FF508600CA9B84 /* WeatherAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC9425A29FF508600CA9B84 /* WeatherAPIManager.swift */; };
+		3AC9425C29FF508600CA9B84 /* WeatherAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC9425A29FF508600CA9B84 /* WeatherAPIManager.swift */; };
+		3AC9425D29FF508600CA9B84 /* WeatherAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC9425A29FF508600CA9B84 /* WeatherAPIManager.swift */; };
 		3ACDAF1A29FEF2430050591C /* WeatherMeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ACDAF1929FEF2430050591C /* WeatherMeApp.swift */; };
 		3ACDAF1C29FEF2430050591C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ACDAF1B29FEF2430050591C /* ContentView.swift */; };
 		3ACDAF1E29FEF2450050591C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3ACDAF1D29FEF2450050591C /* Assets.xcassets */; };
@@ -41,6 +47,8 @@
 
 /* Begin PBXFileReference section */
 		3AC9424D29FF014900CA9B84 /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
+		3AC9425629FF476F00CA9B84 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		3AC9425A29FF508600CA9B84 /* WeatherAPIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherAPIManager.swift; sourceTree = "<group>"; };
 		3ACDAF1629FEF2430050591C /* WeatherMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeatherMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3ACDAF1929FEF2430050591C /* WeatherMeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherMeApp.swift; sourceTree = "<group>"; };
 		3ACDAF1B29FEF2430050591C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -85,8 +93,16 @@
 			children = (
 				3ACDAF1B29FEF2430050591C /* ContentView.swift */,
 				3AC9424D29FF014900CA9B84 /* WelcomeView.swift */,
+				3AC9425629FF476F00CA9B84 /* LoadingView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		3AC9425129FF183F00CA9B84 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		3ACDAF0D29FEF2430050591C = {
@@ -112,6 +128,7 @@
 		3ACDAF1829FEF2430050591C /* WeatherMe */ = {
 			isa = PBXGroup;
 			children = (
+				3AC9425129FF183F00CA9B84 /* Model */,
 				3ACDAF1929FEF2430050591C /* WeatherMeApp.swift */,
 				3AC9424829FEFF7B00CA9B84 /* Views */,
 				3ACDAF4429FEF8F70050591C /* Managers */,
@@ -151,6 +168,7 @@
 			isa = PBXGroup;
 			children = (
 				3ACDAF4529FEF9560050591C /* LocationManager.swift */,
+				3AC9425A29FF508600CA9B84 /* WeatherAPIManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -288,6 +306,8 @@
 				3ACDAF1C29FEF2430050591C /* ContentView.swift in Sources */,
 				3ACDAF1A29FEF2430050591C /* WeatherMeApp.swift in Sources */,
 				3ACDAF4629FEF9560050591C /* LocationManager.swift in Sources */,
+				3AC9425B29FF508600CA9B84 /* WeatherAPIManager.swift in Sources */,
+				3AC9425729FF476F00CA9B84 /* LoadingView.swift in Sources */,
 				3AC9424E29FF014900CA9B84 /* WelcomeView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -297,7 +317,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				3ACDAF4729FEF9560050591C /* LocationManager.swift in Sources */,
+				3AC9425829FF476F00CA9B84 /* LoadingView.swift in Sources */,
 				3AC9424F29FF014900CA9B84 /* WelcomeView.swift in Sources */,
+				3AC9425C29FF508600CA9B84 /* WeatherAPIManager.swift in Sources */,
 				3ACDAF2C29FEF2450050591C /* WeatherMeTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -309,6 +331,8 @@
 				3ACDAF3629FEF2450050591C /* WeatherMeUITests.swift in Sources */,
 				3ACDAF3829FEF2450050591C /* WeatherMeUITestsLaunchTests.swift in Sources */,
 				3ACDAF4829FEF9560050591C /* LocationManager.swift in Sources */,
+				3AC9425D29FF508600CA9B84 /* WeatherAPIManager.swift in Sources */,
+				3AC9425929FF476F00CA9B84 /* LoadingView.swift in Sources */,
 				3AC9425029FF014900CA9B84 /* WelcomeView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -12,13 +12,20 @@ struct ContentView: View {
     
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+            
+            if let location = locationManager.location{
+                Text("Your Location is \(location.latitude),\(location.longitude)")
+            } else {
+                if locationManager.isLoading {
+                    LoadingView()
+                    
+                } else {
+                    WelcomeView().environmentObject(locationManager)
+                }
+            }
         }
-        .padding()
-    }
+        .background(Color(hue: 0.659, saturation: 0.787, brightness: 0.354)).preferredColorScheme(.dark)
+      }
 }
 
 struct ContentView_Previews: PreviewProvider {
