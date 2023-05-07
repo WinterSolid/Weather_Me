@@ -9,18 +9,22 @@ import Foundation
 import CoreLocation
 
 class WeatherAPIManager {
-    func getCurrentWeather(latittude: CLLocationDegrees,longitude: CLLocationDegrees) {
+    func getCurrentWeather(latittude: CLLocationDegrees,longitude: CLLocationDegrees) async throws -> ResponseBody {
         guard let url = URL(string:
-                                "http://api.openweathermap.org/geo/1.0/reverse?lat=\(latittude)&lon=\(longitude)&limit={limit}&appid=\(KEY)&units=metric") else { fatalError("Missing URL")}
+                                "http://api.openweathermap.org/geo/1.0/reverse?lat=\(latittude)&lon=\(longitude)&limit={limit}&appid=\(KEY)&units=metric") else { fatalError("Missing URL")} //TODO: ADD KEY
         
         let urlRequest = URLRequest(url: url)
+        
         let (data, response) = try await URLSession.shared.data(for: urlRequest)
         
         guard (response as? HTTPURLResponse)?.statusCode == 200 else {fatalError("Error Fetching Data") }
         
+        let decodedData = try JSONDecoder().decode(ResponseBody.self, from: data)
+        
+        return decodedData
+        
     }
 }
-/// TODO: ADD REPONSE BODY JSON TO SWIFT
 /// Model of the response body OpenWeather API
 struct ResponseBody: Decodable {
     var coord: CoordinatesResponse
